@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Additional styles */
+@import 'additional-styles/utility-patterns.css';
+@import 'additional-styles/flatpickr.css';
+
+
+@import 'tailwindcss/utilities';
+
+@layer base {
+
+    .no-tailwindcss-base > blockquote,
+    .no-tailwindcss-base > dl,
+    .no-tailwindcss-base > dd,
+    .no-tailwindcss-base > h1,
+    .no-tailwindcss-base > h2,
+    .no-tailwindcss-base > h3,
+    .no-tailwindcss-base > h4,
+    .no-tailwindcss-base > h5,
+    .no-tailwindcss-base > h6,
+    .no-tailwindcss-base > hr,
+    .no-tailwindcss-base > figure,
+    .no-tailwindcss-base > p,
+    .no-tailwindcss-base > pre {
+    margin: revert;
+    }
+
+    .no-tailwindcss-base > ol,
+    .no-tailwindcss-base > ul {
+    list-style: revert;
+    margin: revert;
+    padding: revert;
+    }
+
+    .no-tailwindcss-base > table {
+    border-collapse: revert;
+    }
+
+    .no-tailwindcss-base > h1,
+    .no-tailwindcss-base > h2,
+    .no-tailwindcss-base > h3,
+    .no-tailwindcss-base > h4,
+    .no-tailwindcss-base > h5,
+    .no-tailwindcss-base > h6 {
+    font-size: revert;
+    font-weight: revert;
+    }
+
+    /* .no-tailwindcss-base h1,
+    .no-tailwindcss-base h2,
+    .no-tailwindcss-base h3,
+    .no-tailwindcss-base h4,
+    .no-tailwindcss-base h5,
+    .no-tailwindcss-base h6 {
+        color: revert !important; 
+        font-size: revert;
+        font-weight: revert;
+    }
+
+    .no-tailwindcss-base ol,
+    .no-tailwindcss-base ul {
+        list-style: revert;
+        margin: revert;
+        padding: revert;
+    }
+
+    .no-tailwindcss-base > table {
+        border-collapse: revert;
+    } */
+
+        /*
+    Margin and rounding are personal preferences,
+    overflow-x-auto is recommended.
+    */
+    pre {
+        @apply my-0  rounded overflow-x-auto flex items-start;
+    }
+    
+    .bg-dark{
+
+        @apply dark:bg-[#070e1e];
+        /* 070817 */
+        /* 070e1e; */
+    
+    }
+    /*
+    Add some vertical padding and expand the width
+    to fill its container. The horizontal padding
+    comes at the line level so that background
+    colors extend edge to edge.
+    */
+    pre code.torchlight {
+        @apply block py-4 min-w-max w-full;
+    }
+    
+    /*
+    Horizontal line padding.
+    */
+    pre code.torchlight .line {
+        @apply px-4;
+    }
+    
+    /*
+    Push the code away from the line numbers and
+    summary caret indicators.
+    */
+    pre code.torchlight .line-number,
+    pre code.torchlight .summary-caret {
+        @apply mr-4;
+    }
+      
+}
+
+/* See Alpine.js: https://github.com/alpinejs/alpine#x-cloak */
+[x-cloak=""] {
+    display: none;
+}
+
+@media screen and (max-width: theme('screens.lg')) {
+    [x-cloak="lg"] { display: none; }
+}
+
+
